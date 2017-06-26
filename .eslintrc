@@ -1,0 +1,15 @@
+{
+  parser: "babel-eslint",
+  "plugins": [
+    "react"
+  ],
+  "rules": {
+  },
+  "parserOptions": {
+    "sourceType": "module"
+  },
+  "env": {
+    "browser": true,
+   },
+  "extends": ["eslint:recommended", "plugin:react/recommended"]
+}
