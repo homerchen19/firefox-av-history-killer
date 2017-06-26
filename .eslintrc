@@ -4,6 +4,7 @@
     "react"
   ],
   "rules": {
+    "no-console": 0,
   },
   "parserOptions": {
     "sourceType": "module"
@@ -11,5 +12,8 @@
   "env": {
     "browser": true,
    },
+  "globals": {
+    "chrome": true
+  },
   "extends": ["eslint:recommended", "plugin:react/recommended"]
 }

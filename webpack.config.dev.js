@@ -8,15 +8,17 @@ const WriteFilePlugin = require('write-file-webpack-plugin');
 
 module.exports = {
 	devtool: 'eval-cheap-module-source-map',
-	entry: [
-		'react-hot-loader/patch',
-		'webpack-dev-server/client?http://localhost:3000',
-		'webpack/hot/only-dev-server',
-		'./src/index.js'
-	],
+	entry: {
+		bundle: [
+			'react-hot-loader/patch',
+			'webpack-dev-server/client?http://localhost:3000',
+			'webpack/hot/only-dev-server',
+			'./src/index.js'
+		],
+	},
 	output: {
 		path: path.join(__dirname, 'dist'),
-		filename: 'bundle.js',
+		filename: '[name].js',
 	},
 	module: {
     rules: [
