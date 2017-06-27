@@ -1,21 +1,27 @@
 const getDomainFromUrl = url => {
-	let host = null;
+	let domain = '';
   const regex = /^(?:http:\/\/|www\.|https:\/\/)([^\\/]+)/;
   const match = url.match(regex);
 
-	if(typeof url === undefined || null === url)
-		url = window.location.href;
+  if(typeof match !== undefined && null !== match) {
+		domain = match[1];
+	}
 
-  if(typeof match !== undefined && null !== match)
-		host = match[1];
-
-	return host;
+	return domain;
 }
 
-const checkForValidUrl = (tabId, changeInfo, tab) => {
-  const domainName = getDomainFromUrl(tab.url).toLowerCase();
+const checkForValidUrl = historyItem => {
+	let domain = '';
+	let currentTab = {};
 
-	console.log(domainName);
+	if(typeof historyItem.url !== undefined && null !== historyItem.url) {
+		domain = getDomainFromUrl(historyItem.url).toLowerCase();
+
+		chrome.tabs.query({ currentWindow: true, active: true }, tabs => {
+			currentTab = tabs[0];
+			chrome.pageAction.show(currentTab.id);
+		});
+	}
 };
 
-chrome.tabs.onUpdated.addListener(checkForValidUrl);
+chrome.history.onVisited.addListener(checkForValidUrl);
