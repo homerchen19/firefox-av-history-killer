@@ -4,7 +4,7 @@
   "description": "Chrome Extension which clears AV browsing history automatically.",
   "version": "0.0.1",
   "background": {
-    "scripts": ["utils/background.js"],
+    "page": "background.html",
     "persistent": false
   },
   "page_action": {

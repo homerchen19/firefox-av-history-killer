@@ -15,6 +15,7 @@ module.exports = {
 			'webpack/hot/only-dev-server',
 			'./src/index.js'
 		],
+    background: './src/background.js'
 	},
 	output: {
 		path: path.join(__dirname, 'dist'),
@@ -47,6 +48,13 @@ module.exports = {
     new webpack.NamedModulesPlugin(),
     new HtmlWebpackPlugin({
       template: './src/index.html',
+      filename: "index.html",
+      chunks: ["bundle"]
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/background.html',
+      filename: "background.html",
+      chunks: ["background"]
     }),
     new ExtractTextPlugin({
       filename: 'style.css',
