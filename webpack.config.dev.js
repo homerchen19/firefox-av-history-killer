@@ -15,7 +15,7 @@ module.exports = {
 			'webpack/hot/only-dev-server',
 			'./src/index.js'
 		],
-    background: './src/background.js'
+    background: './src/background/background.js'
 	},
 	output: {
 		path: path.join(__dirname, 'dist'),
@@ -52,7 +52,7 @@ module.exports = {
       chunks: ["bundle"]
     }),
     new HtmlWebpackPlugin({
-      template: './src/background.html',
+      template: './src/background/background.html',
       filename: "background.html",
       chunks: ["background"]
     }),

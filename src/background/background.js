@@ -21,9 +21,7 @@ const checkForValidUrl = historyItem => {
 			currentTab = tabs[0];
 			chrome.pageAction.show(currentTab.id);
 		});
-
 	}
-  console.log(domain);
 };
 
 chrome.history.onVisited.addListener(checkForValidUrl);
