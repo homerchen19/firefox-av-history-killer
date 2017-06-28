@@ -60,7 +60,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "3ec8a05ef0ae29cced8d"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "8e34f2a4c8d85e4e5452"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -1385,7 +1385,7 @@ eval("\n\nvar _typeof = typeof Symbol === \"function\" && typeof Symbol.iterator
 /***/ "./src/utils/AV.json":
 /***/ (function(module, exports) {
 
-eval("module.exports = [\n\t\"7mm.tv\",\n\t\"avgle.com\",\n\t\"www.pornhub.com\",\n\t\"www.youav.com\"\n];//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvdXRpbHMvQVYuanNvbi5qcyIsInNvdXJjZXMiOlsid2VicGFjazovLy8uL3NyYy91dGlscy9BVi5qc29uP2M5ZjYiXSwic291cmNlc0NvbnRlbnQiOlsibW9kdWxlLmV4cG9ydHMgPSBbXG5cdFwiN21tLnR2XCIsXG5cdFwiYXZnbGUuY29tXCIsXG5cdFwid3d3LnBvcm5odWIuY29tXCIsXG5cdFwid3d3LnlvdWF2LmNvbVwiXG5dO1xuXG5cbi8vLy8vLy8vLy8vLy8vLy8vL1xuLy8gV0VCUEFDSyBGT09URVJcbi8vIC4vc3JjL3V0aWxzL0FWLmpzb25cbi8vIG1vZHVsZSBpZCA9IC4vc3JjL3V0aWxzL0FWLmpzb25cbi8vIG1vZHVsZSBjaHVua3MgPSAxIl0sIm1hcHBpbmdzIjoiQUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EiLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./src/utils/AV.json\n");
+eval("module.exports = [\n\t\"7mm.tv\",\n\t\"avgle.com\",\n\t\"avpapa.co\",\n\t\"www.pornhub.com\",\n\t\"www.youav.com\"\n];//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvdXRpbHMvQVYuanNvbi5qcyIsInNvdXJjZXMiOlsid2VicGFjazovLy8uL3NyYy91dGlscy9BVi5qc29uP2M5ZjYiXSwic291cmNlc0NvbnRlbnQiOlsibW9kdWxlLmV4cG9ydHMgPSBbXG5cdFwiN21tLnR2XCIsXG5cdFwiYXZnbGUuY29tXCIsXG5cdFwiYXZwYXBhLmNvXCIsXG5cdFwid3d3LnBvcm5odWIuY29tXCIsXG5cdFwid3d3LnlvdWF2LmNvbVwiXG5dO1xuXG5cbi8vLy8vLy8vLy8vLy8vLy8vL1xuLy8gV0VCUEFDSyBGT09URVJcbi8vIC4vc3JjL3V0aWxzL0FWLmpzb25cbi8vIG1vZHVsZSBpZCA9IC4vc3JjL3V0aWxzL0FWLmpzb25cbi8vIG1vZHVsZSBjaHVua3MgPSAxIl0sIm1hcHBpbmdzIjoiQUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSIsInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./src/utils/AV.json\n");
 
 /***/ }),
 
