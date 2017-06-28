@@ -13,7 +13,7 @@
     "browser": true,
    },
   "globals": {
-    "chrome": true
+    "browser": true
   },
   "extends": ["eslint:recommended", "plugin:react/recommended"]
 }

@@ -1,3 +1,5 @@
+import AV from '../utils/AV.json';
+
 const getDomainFromUrl = url => {
 	let domain = '';
   const regex = /^(?:http:\/\/|www\.|https:\/\/)([^\\/]+)/;
@@ -10,18 +12,27 @@ const getDomainFromUrl = url => {
 	return domain;
 }
 
-const checkForValidUrl = historyItem => {
+const checkValidUrl = historyItem => {
 	let domain = '';
 	let currentTab = {};
+  const url = historyItem.url;
 
-	if(typeof historyItem.url !== undefined && null !== historyItem.url) {
-		domain = getDomainFromUrl(historyItem.url).toLowerCase();
+	if(typeof url !== undefined && null !== historyItem.url) {
+		domain = getDomainFromUrl(url).toLowerCase();
 
-		chrome.tabs.query({ currentWindow: true, active: true }, tabs => {
-			currentTab = tabs[0];
-			chrome.pageAction.show(currentTab.id);
-		});
+    const isAV = (AV.indexOf(domain) !== -1) ? true : false;
+
+    if(isAV) {
+      browser.history.deleteUrl({
+        url: url,
+      });
+
+      browser.tabs.query({ currentWindow: true, active: true }, tabs => {
+        currentTab = tabs[0];
+        browser.pageAction.show(currentTab.id);
+      });
+    }
 	}
 };
 
-chrome.history.onVisited.addListener(checkForValidUrl);
+browser.history.onVisited.addListener(checkValidUrl);
