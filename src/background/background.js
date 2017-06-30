@@ -18,7 +18,6 @@ const getDomainFromUrl = url => {
 
 const checkValidUrl = historyItem => {
 	let domain = '';
-	let currentTab = {};
   const url = historyItem.url;
 
 	if(typeof url !== undefined && null !== historyItem.url) {
@@ -30,21 +29,16 @@ const checkValidUrl = historyItem => {
       browser.history.deleteUrl({
         url: url,
       });
-
-      browser.tabs.query({ currentWindow: true, active: true }, tabs => {
-        currentTab = tabs[0];
-        browser.pageAction.show(currentTab.id);
-      });
     }
 	}
 };
 
 const checkStoredSettings = async historyItem => {
   const storedSettings = await browser.storage.local.get();
-  if (!storedSettings.settings) {
+  if(!storedSettings.settings) {
     browser.storage.local.set({settings});
   }
-  else if (storedSettings.settings.active) {
+  else if(storedSettings.settings.active) {
     checkValidUrl(historyItem);
   }
 }

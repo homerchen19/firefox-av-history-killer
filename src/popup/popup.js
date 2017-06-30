@@ -20,10 +20,16 @@ class Popup extends React.Component {
 		return (
       <ToggleButton
         value={ this.state.active }
-        onToggle={value => {
+        onToggle={async value => {
           this.setState({
             active: !value,
-          })
+          });
+
+          await browser.storage.local.set({
+            settings: {
+              active: !value,
+            },
+          });
         }} />
     );
 	}

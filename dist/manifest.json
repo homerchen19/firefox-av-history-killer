@@ -11,7 +11,7 @@
     "48": "assets/img/icon-48.png",
     "96": "assets/img/icon-128.png"
   },
-  "page_action": {
+  "browser_action": {
     "default_icon": {
       "16": "assets/img/icon-16.png",
       "48": "assets/img/icon-48.png",
