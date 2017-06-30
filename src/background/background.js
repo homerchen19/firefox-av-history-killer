@@ -1,3 +1,4 @@
+import './storage.js';
 import AV from '../utils/AV.json';
 
 const settings = {
