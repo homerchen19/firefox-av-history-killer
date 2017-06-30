@@ -1,6 +1,8 @@
 # AV History Killer
 >  A Firefox WebExtension which deletes AV browsing history automatically
 
+<img width="272" alt="screen shot 2017-07-01 at 12 30 08 am" src="https://user-images.githubusercontent.com/12113222/27745824-6d5650b2-5df7-11e7-9fff-5491841600ab.png">  
+
 ## AV Websites (increasing...)
 > Checkout [src/utils/AV.json](https://github.com/xxhomey19/firefox-av-history-killer/blob/master/src/utils/AV.json)
 
@@ -11,6 +13,8 @@
 - [https://www.youav.com/](https://www.youav.com/)
 
 ## Develop
+This WebExtension is developed with Nodejs, ES6, React and Webpack  
+
 1. Run dev server
 ```
 $ git clone https://github.com/xxhomey19/firefox-av-history-killer.git
