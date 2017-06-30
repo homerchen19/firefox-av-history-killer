@@ -1,5 +1,9 @@
 import AV from '../utils/AV.json';
 
+const settings = {
+  active: true,
+};
+
 const getDomainFromUrl = url => {
 	let domain = '';
   const regex = /^(?:http:\/\/|www\.|https:\/\/)([^\\/]+)/;
@@ -35,4 +39,14 @@ const checkValidUrl = historyItem => {
 	}
 };
 
-browser.history.onVisited.addListener(checkValidUrl);
+const checkStoredSettings = async historyItem => {
+  const storedSettings = await browser.storage.local.get();
+  if (!storedSettings.settings) {
+    browser.storage.local.set({settings});
+  }
+  else if (storedSettings.settings.active) {
+    checkValidUrl(historyItem);
+  }
+}
+
+browser.history.onVisited.addListener(checkStoredSettings);
