@@ -1,0 +1,16 @@
+.main {
+  display: flex;
+  font-family: "PingFang TC", "Helvetica Neue", Helvetica, Arial;
+  justify-content: space-around;
+  align-items: center;
+  padding: 5px;
+}
+
+.autoDelete {
+  flex: 1 1 auto;
+  margin: 5px;
+}
+.toggleButton {
+  flex: 1 1 auto;
+  margin: 5px;
+}

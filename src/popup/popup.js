@@ -1,5 +1,6 @@
 import React from 'react';
 import ToggleButton from 'react-toggle-button';
+import styles from './popup.module.css';
 
 class Popup extends React.Component {
   constructor(props) {
@@ -18,19 +19,24 @@ class Popup extends React.Component {
 
 	render() {
 		return (
-      <ToggleButton
-        value={ this.state.active }
-        onToggle={async value => {
-          this.setState({
-            active: !value,
-          });
-
-          await browser.storage.local.set({
-            settings: {
+      <div className={styles.main}>
+        <span className={styles.autoDelete}>Auto Delete:</span>
+        <ToggleButton
+          className={styles.toggleButton}
+          value={ this.state.active }
+          onToggle={async value => {
+            this.setState({
               active: !value,
-            },
-          });
-        }} />
+            });
+
+            await browser.storage.local.set({
+              settings: {
+                active: !value,
+              },
+            });
+          }}
+        />
+      </div>
     );
 	}
 }

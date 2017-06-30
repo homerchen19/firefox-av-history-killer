@@ -29,18 +29,23 @@ module.exports = {
 				exclude: [/node_modules/]
 			},
 			{
-				test: /\.css$/,
-				use: ['style-loader', 'css-loader'],
-				exclude: [/node_modules/]
+				test: /^((?!\.module).)*\.css$/,
+				loaders: [
+          'style-loader',
+          'css-loader?sourceMap',
+        ],
+				include: [
+          path.resolve(__dirname, 'src'),
+        ],
 			},
-			{
-				test: /\.(sass|scss)$/,
-				use: ExtractTextPlugin.extract({
-					fallback: 'style-loader',
-					use: ['css-loader', 'sass-loader'],
-				}),
-				exclude: [/node_modules/]
-			},
+      {
+        test: /\.module\.css$/,
+        loaders: [
+          'style-loader',
+          'css-loader?modules&sourceMap&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]', // eslint-disable-line max-len
+        ],
+        exclude: /node_modules/,
+      },
 		]
   },
   plugins: [
