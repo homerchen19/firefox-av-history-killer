@@ -1,16 +1,41 @@
 .main {
   display: flex;
-  font-family: "PingFang TC", "Helvetica Neue", Helvetica, Arial;
-  justify-content: space-around;
-  align-items: center;
+  width: auto;
+  flex-direction: column;
+  padding-top: 0;
   padding: 5px;
+  font-family: 'PingFang TC', 'Helvetica Neue', Helvetica, Arial;
+}
+
+.title {
+  font-size: large;
+  font-weight: bold;
+  padding-bottom: 15px;
+  border-bottom: 1px solid gray;
 }
 
 .autoDelete {
-  flex: 1 1 auto;
-  margin: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid gray;
 }
-.toggleButton {
-  flex: 1 1 auto;
-  margin: 5px;
+
+.hyperlinks {
+  margin-top: 10px;
+}
+
+.hyperlink {
+  display: inline-block;
+  font-size: small;
+  color: #005689;
+  border-bottom: 0.0625rem solid #dcdcdc;
+  text-decoration: none;
+  transition: border-color .15s ease-out;
+}
+
+.hyperlink:hover {
+  border-color: #005689;
 }

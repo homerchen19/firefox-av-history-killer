@@ -21,22 +21,36 @@ class Popup extends React.Component {
   render() {
     return (
       <div className={styles.main}>
-        <span className={styles.autoDelete}>Auto Delete:</span>
-        <ToggleButton
-          className={styles.toggleButton}
-          value={this.state.active}
-          onToggle={async value => {
-            this.setState({
-              active: !value,
-            });
-
-            await browser.storage.local.set({
-              settings: {
+        <span className={styles.title}>🔞 AV History Killer 🔞</span>
+        <div className={styles.autoDelete}>
+          <span>Auto Delete</span>
+          <ToggleButton
+            value={this.state.active}
+            onToggle={async value => {
+              this.setState({
                 active: !value,
-              },
-            });
-          }}
-        />
+              });
+
+              await browser.storage.local.set({
+                settings: {
+                  active: !value,
+                },
+              });
+            }}
+          />
+        </div>
+        <div className={styles.hyperlinks}>
+          <a
+            href="https://github.com/xxhomey19/firefox-av-history-killer/issues"
+            className={styles.hyperlink}
+          >
+            Feedback
+          </a>
+          <br />
+          <a href="https://t.me/PPAV_bot" className={styles.hyperlink}>
+            Try PPAV
+          </a>
+        </div>
       </div>
     );
   }
