@@ -6,42 +6,41 @@ const settings = {
 };
 
 const getDomainFromUrl = url => {
-	let domain = '';
+  let domain = '';
   const regex = /^(?:http:\/\/|www\.|https:\/\/)([^\\/]+)/;
   const match = url.match(regex);
 
-  if(typeof match !== undefined && null !== match) {
-		domain = match[1];
-	}
+  if (typeof match !== undefined && null !== match) {
+    domain = match[1];
+  }
 
-	return domain;
-}
+  return domain;
+};
 
 const checkValidUrl = historyItem => {
-	let domain = '';
+  let domain = '';
   const url = historyItem.url;
 
-	if(typeof url !== undefined && null !== historyItem.url) {
-		domain = getDomainFromUrl(url).toLowerCase();
+  if (typeof url !== undefined && null !== historyItem.url) {
+    domain = getDomainFromUrl(url).toLowerCase();
 
-    const isAV = (AV.indexOf(domain) !== -1) ? true : false;
+    const isAV = AV.indexOf(domain) !== -1 ? true : false;
 
-    if(isAV) {
+    if (isAV) {
       browser.history.deleteUrl({
         url: url,
       });
     }
-	}
+  }
 };
 
 const checkStoredSettings = async historyItem => {
   const storedSettings = await browser.storage.local.get();
-  if(!storedSettings.settings) {
-    browser.storage.local.set({settings});
-  }
-  else if(storedSettings.settings.active) {
+  if (!storedSettings.settings) {
+    browser.storage.local.set({ settings });
+  } else if (storedSettings.settings.active) {
     checkValidUrl(historyItem);
   }
-}
+};
 
 browser.history.onVisited.addListener(checkStoredSettings);

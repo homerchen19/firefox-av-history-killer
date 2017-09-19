@@ -1,6 +1,6 @@
 const setNewIcon = storageChanges => {
   const { settings } = storageChanges;
-  if(settings.newValue.active) {
+  if (settings.newValue.active) {
     browser.browserAction.setIcon({
       path: {
         16: './assets/img/icon-16.png',
@@ -8,8 +8,7 @@ const setNewIcon = storageChanges => {
         128: './assets/img/icon-128.png',
       },
     });
-  }
-  else {
+  } else {
     browser.browserAction.setIcon({
       path: {
         16: './assets/img/icon-16-inactive.png',
@@ -18,6 +17,6 @@ const setNewIcon = storageChanges => {
       },
     });
   }
-}
+};
 
 browser.storage.onChanged.addListener(setNewIcon);
