@@ -1,7 +1,8 @@
 {
   parser: "babel-eslint",
   "plugins": [
-    "react"
+    "react",
+    "prettier"
   ],
   "rules": {
     "no-console": 0,
@@ -15,5 +16,5 @@
   "globals": {
     "browser": true
   },
-  "extends": ["eslint:recommended", "plugin:react/recommended"]
+  "extends": ["eslint:recommended", "plugin:react/recommended", "prettier"]
 }
