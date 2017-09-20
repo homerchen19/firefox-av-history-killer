@@ -8,8 +8,8 @@ const config = require('./webpack.config.base');
 module.exports = merge.smart(config, {
   devtool: 'source-map',
   entry: {
-    bundle: './src/index.js',
-    background: './src/background/background.js',
+    bundle: ['babel-polyfill', './src/index.js'],
+    background: ['babel-polyfill', './src/background/background.js'],
   },
   plugins: [
     new UglifyJSPlugin({

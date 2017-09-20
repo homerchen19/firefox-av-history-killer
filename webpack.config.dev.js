@@ -10,12 +10,13 @@ module.exports = merge.smart(config, {
   devtool: 'eval',
   entry: {
     bundle: [
+      'babel-polyfill',
       'react-hot-loader/patch',
       'webpack-dev-server/client?http://localhost:3000',
       'webpack/hot/only-dev-server',
       './src/index.js',
     ],
-    background: './src/background/background.js',
+    background: ['babel-polyfill', './src/background/background.js'],
   },
   plugins: [
     new webpack.NamedModulesPlugin(),
