@@ -7,7 +7,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const WriteFilePlugin = require('write-file-webpack-plugin');
 
 module.exports = {
-  devtool: 'eval-cheap-module-source-map',
+  devtool: 'eval',
   entry: {
     bundle: [
       'react-hot-loader/patch',
@@ -25,13 +25,8 @@ module.exports = {
     rules: [
       {
         test: /\.(js|jsx)$/,
-        use: ['babel-loader', 'eslint-loader'],
+        use: ['babel-loader'],
         exclude: [/node_modules/],
-      },
-      {
-        test: /^((?!\.module).)*\.css$/,
-        loaders: ['style-loader', 'css-loader?sourceMap'],
-        include: [path.resolve(__dirname, 'src')],
       },
       {
         test: /\.module\.css$/,
@@ -44,7 +39,6 @@ module.exports = {
     ],
   },
   plugins: [
-    new webpack.HotModuleReplacementPlugin(),
     new webpack.NamedModulesPlugin(),
     new HtmlWebpackPlugin({
       template: './src/index.html',

@@ -1,6 +1,15 @@
 {
-  "presets": ["es2015", "react"],
-  "plugins": [
-    "react-hot-loader/babel"
-  ]
+  "presets": [
+    [
+      "env",
+      {
+        "targets": {
+          "browsers": ["last 2 versions"],
+          "uglify": true
+        }
+      }
+    ],
+    "react"
+  ],
+  "plugins": ["react-hot-loader/babel"]
 }
