@@ -6,7 +6,7 @@ const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const config = require('./webpack.config.base');
 
 module.exports = merge.smart(config, {
-  devtool: 'source-map',
+  devtool: 'cheap-module-source-map',
   entry: {
     bundle: ['babel-polyfill', './src/index.js'],
     background: ['babel-polyfill', './src/background/background.js'],
@@ -17,6 +17,7 @@ module.exports = merge.smart(config, {
         unused: true,
         warnings: false,
       },
+      sourceMap: true,
     }),
   ],
 });
