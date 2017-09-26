@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "AV History Killer",
   "description": "A Firefox WebExtension which deletes AV browsing history automatically.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "background": {
     "page": "background.html",
     "persistent": false
