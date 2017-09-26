@@ -7,7 +7,6 @@ const WriteFilePlugin = require('write-file-webpack-plugin');
 const config = require('./webpack.config.base');
 
 module.exports = merge.smart(config, {
-  devtool: 'eval',
   entry: {
     bundle: [
       'babel-polyfill',
