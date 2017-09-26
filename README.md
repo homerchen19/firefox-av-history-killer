@@ -8,11 +8,13 @@
 ## AV Websites (increasing...)
 > Checkout [src/utils/AV.json](https://github.com/xxhomey19/firefox-av-history-killer/blob/master/src/utils/AV.json)
 
-- [https://7mm.tv/](https://7mm.tv/)
-- [http://avpapa.co/](http://avpapa.co/)
-- [https://avgle.com/](https://avgle.com/)
-- [https://www.pornhub.com/](https://www.pornhub.com/)
-- [https://www.youav.com/](https://www.youav.com/)
+- [https://7mm.tv](https://7mm.tv)
+- [http://avpapa.co](http://avpapa.co)
+- [https://avgle.com](https://avgle.com)
+- [http://iavtv.net](http://iavtv.net)
+- [http://www5.javmost.com](http://www5.javmost.com)
+- [https://www.pornhub.com](https://www.pornhub.com)
+- [https://www.youav.com](https://www.youav.com)
 
 ## Develop
 This WebExtension is developed with Nodejs, ES6, React and Webpack.  
