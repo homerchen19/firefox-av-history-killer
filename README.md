@@ -15,6 +15,7 @@
 - [http://www5.javmost.com](http://www5.javmost.com)
 - [https://www.pornhub.com](https://www.pornhub.com)
 - [https://www.youav.com](https://www.youav.com)
+- [https://www.youjizz.com/](https://www.youjizz.com/)
 
 ## Develop
 This WebExtension is developed with Nodejs, ES6, React and Webpack.  
